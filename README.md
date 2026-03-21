@@ -170,3 +170,32 @@ To better understand the model’s performance:
 ---
 
 # 📁 Repository Structure
+ weather-rnn-temperature-prediction/
+│
+├── DL_Assignment_2_RNN.ipynb
+├── README.md
+└── DL Assignment 2 - RNN.pdf
+
+
+---
+
+# 🚀 How to Run the Project
+
+### 1️⃣ Open the Notebook
+
+Click the **Google Colab button above**.
+
+---
+
+### 2️⃣ Install Required Libraries
+
+```python
+pip install tensorflow pandas numpy matplotlib scikit-learn kaggle
+
+# Kaggle API Setup + Download Dataset
+
+!mkdir -p ~/.kaggle && \
+cp kaggle.json ~/.kaggle/ && \
+chmod 600 ~/.kaggle/kaggle.json && \
+kaggle datasets download -d muthuj7/weather-dataset && \
+unzip weather-dataset.zip
