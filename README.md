@@ -13,7 +13,7 @@ A deep learning project focused on building and evaluating a **Recurrent Neural 
 
 Click the button below to open the notebook directly in Google Colab.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_COLAB_LINK_HERE)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1i0i7nBdfW63Q2hr2J2WSoMpHJnEK_rK1)
 
 ---
 
