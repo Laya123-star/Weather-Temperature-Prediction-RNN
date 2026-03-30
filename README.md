@@ -222,27 +222,23 @@ weather-rnn-temperature-prediction/
 
 ---
 
-# 🚀 How to Run the Project
+## 🚀 How to Run the Project
 
-### 1️⃣ Open the Notebook
+### 1️⃣ Install Required Libraries
 
-Click the **Google Colab link above**
-
----
-
-### 2️⃣ Install Required Libraries
+```bash
+pip install tensorflow pandas numpy matplotlib scikit-learn kaggle
 
 ```python
 pip install tensorflow pandas numpy matplotlib scikit-learn kaggle
 
 # Kaggle API Setup + Download Dataset
 
-!mkdir -p ~/.kaggle && \
-cp kaggle.json ~/.kaggle/ && \
-chmod 600 ~/.kaggle/kaggle.json && \
-kaggle datasets download -d muthuj7/weather-dataset && \
+mkdir -p ~/.kaggle
+cp kaggle.json ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
+kaggle datasets download -d muthuj7/weather-dataset
 unzip weather-dataset.zip
----
 
 # 📌 Academic Submission
 
