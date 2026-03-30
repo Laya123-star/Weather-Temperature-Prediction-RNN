@@ -243,6 +243,14 @@ chmod 600 ~/.kaggle/kaggle.json && \
 kaggle datasets download -d muthuj7/weather-dataset && \
 unzip weather-dataset.zip
 
+---
+
+# 📌 Academic Submission
+
+This project was created as part of a **Deep Learning assignment**, showcasing end-to-end implementation of a time-series forecasting model using RNN, including data preprocessing, sequence generation, model training, evaluation, and prediction visualization.
+
+---
+
 # 📌 Future Enhancements
 
 - Implement advanced models like **LSTM and GRU** for better sequence learning  
@@ -257,6 +265,8 @@ unzip weather-dataset.zip
 
 - Add interactive visualizations and dashboards  
 
+---
+
 # 👤 Author
 
 **Name:** Laya Mary Joy  
@@ -264,6 +274,9 @@ unzip weather-dataset.zip
 **Organization:** Entri Elevate  
 
 **Date:** March 21, 2026
+
+---
+
 
 # ⭐ Acknowledgment
 
