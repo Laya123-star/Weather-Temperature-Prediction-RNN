@@ -23,13 +23,19 @@ This project implements a **SimpleRNN model** to predict future temperature valu
 
 The project covers the complete deep learning pipeline including:
 
-- Dataset exploration  
-- Time-series preprocessing  
-- Sequence generation  
-- RNN model design  
-- Model training and validation  
-- Model evaluation using regression metrics  
-- Forecast visualization  
+* Dataset exploration
+  
+* Time-series preprocessing
+  
+* Sequence generation
+  
+* RNN model design
+  
+* Model training and validation
+    
+* Model evaluation using regression metrics
+   
+* Forecast visualization  
 
 The goal is to build a **robust RNN model capable of capturing temporal patterns in weather data**.
 
@@ -40,10 +46,15 @@ The goal is to build a **robust RNN model capable of capturing temporal patterns
 The main objectives of this project are:
 
 🔹 Understand time-series dataset structure  
+
 🔹 Perform data preprocessing and normalization  
+
 🔹 Create sequences for RNN input  
+
 🔹 Build a SimpleRNN model using TensorFlow/Keras  
+
 🔹 Evaluate model performance using regression metrics  
+
 🔹 Forecast future temperature values  
 
 ---
@@ -58,7 +69,7 @@ https://www.kaggle.com/datasets/muthuj7/weather-dataset
 ### Dataset Details
 
 | Feature | Description |
-|------|-------------|
+|--------|------------|
 | Date | Timestamp |
 | Temperature | Target variable |
 | Humidity | Atmospheric moisture |
@@ -72,26 +83,30 @@ https://www.kaggle.com/datasets/muthuj7/weather-dataset
 Before training the RNN model, several preprocessing steps were applied:
 
 ### ✔ Data Exploration
-- Displayed initial rows  
-- Plotted temperature trends over time  
+* Displayed initial rows
+  
+* Plotted temperature trends over time  
 
 ### ✔ Missing Value Handling
-- Checked and handled missing values  
+* Checked and handled missing values  
 
 ### ✔ Feature Scaling
-- Used **MinMaxScaler** to normalize values between 0 and 1  
+* Used **MinMaxScaler** to normalize values between 0 and 1  
 
 ### ✔ Sequence Creation
-- Used past **7–14 days** as input sequences  
-- Target: **Next day temperature**  
+* Used past **7–14 days** as input sequences
+  
+* Target: **Next day temperature**  
 
 ### ✔ Train / Validation / Test Split
 
 The dataset was split into:
 
-- Training Set  
-- Validation Set  
-- Test Set  
+* Training Set
+  
+* Validation Set
+  
+* Test Set  
 
 ---
 
@@ -102,8 +117,11 @@ A **SimpleRNN model** was built using **TensorFlow / Keras**.
 ### Architecture Components
 
 ✔ Input Layer (sequence data)  
+
 ✔ SimpleRNN Layer (32–64 units)  
+
 ✔ Dropout Layer for regularization  
+
 ✔ Dense Layer (1 neuron for output)  
 
 ---
@@ -114,13 +132,15 @@ The RNN model was trained using the **training dataset** and validated using the
 
 ### Training Techniques Used
 
-- Batch Training  
-- Validation Monitoring  
-- Loss Curve Analysis  
+* Batch Training
+  
+* Validation Monitoring
+  
+* Loss Curve Analysis  
 
 Training progress was monitored using:
 
-- Training Loss vs Validation Loss  
+* Training Loss vs Validation Loss  
 
 ---
 
@@ -130,9 +150,11 @@ After training, the model was evaluated using the **test dataset**.
 
 ### Evaluation Metrics
 
-- Mean Absolute Error (MAE)  
-- Root Mean Squared Error (RMSE)  
-- R² Score  
+* Mean Absolute Error (MAE)
+  
+* Root Mean Squared Error (RMSE)
+    
+* R² Score  
 
 ---
 
@@ -140,24 +162,42 @@ After training, the model was evaluated using the **test dataset**.
 
 To better understand the model’s performance:
 
-- Compared **actual vs predicted temperatures**  
-- Visualized prediction trends  
-- Evaluated forecasting accuracy  
+* Compared **actual vs predicted temperatures**
+  
+* Visualized prediction trends
+  
+* Evaluated forecasting accuracy  
 
 ---
 
 # 🔮 Forecasting
 
-- Predicted **next 7 days temperature**  
-- Used recent historical data as input  
-- Visualized future predictions  
+* Predicted **next 7 days temperature**
+  
+* Used recent historical data as input
+  
+* Visualized future predictions  
+
+---
+
+# ⚠️ Limitations
+
+* SimpleRNN may struggle with capturing long-term dependencies compared to LSTM/GRU  
+
+* Limited dataset size may affect model generalization  
+
+* External environmental factors (rainfall, climate anomalies) are not included  
+
+* Performance may decrease for long-term forecasts  
+
+* Model heavily depends on data quality and preprocessing  
 
 ---
 
 # 🛠 Tech Stack
 
 | Tool | Purpose |
-|----|----|
+|------|--------|
 | Python | Programming language |
 | TensorFlow / Keras | Deep learning framework |
 | NumPy | Numerical computation |
@@ -170,12 +210,15 @@ To better understand the model’s performance:
 ---
 
 # 📁 Repository Structure
- weather-rnn-temperature-prediction/
-│
-├── DL_Assignment_2_RNN.ipynb
-├── README.md
-└── DL Assignment 2 - RNN.pdf
 
+weather-rnn-temperature-prediction/
+│  
+
+├── DL_Assignment_2_RNN.ipynb  
+
+├── README.md  
+
+└── DL Assignment 2 - RNN.pdf  
 
 ---
 
@@ -183,7 +226,7 @@ To better understand the model’s performance:
 
 ### 1️⃣ Open the Notebook
 
-Click the **Google Colab button above**.
+Click the **Google Colab link above**
 
 ---
 
@@ -199,3 +242,30 @@ cp kaggle.json ~/.kaggle/ && \
 chmod 600 ~/.kaggle/kaggle.json && \
 kaggle datasets download -d muthuj7/weather-dataset && \
 unzip weather-dataset.zip
+
+# 📌 Future Enhancements
+
+- Implement advanced models like **LSTM and GRU** for better sequence learning  
+
+- Perform hyperparameter tuning to improve model accuracy  
+
+- Use larger and more diverse weather datasets  
+
+- Integrate real-time weather data using APIs  
+
+- Deploy the model as a web application (Streamlit / Flask)  
+
+- Add interactive visualizations and dashboards  
+
+# 👤 Author
+
+**Name:** Laya Mary Joy  
+
+**Organization:** Entri Elevate  
+
+**Date:** March 21, 2026
+
+# ⭐ Acknowledgment
+
+Thanks to **Entri Elevate** for guidance and support.
+
