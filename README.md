@@ -11,62 +11,53 @@ A deep learning project focused on building and evaluating a **Recurrent Neural 
 
 ## 🚀 Run Notebook in Google Colab
 
-Click the button below to open the notebook directly in Google Colab.
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1i0i7nBdfW63Q2hr2J2WSoMpHJnEK_rK1)
 
 ---
 
-# 📘 Project Overview
+## 📘 Project Overview
 
 This project implements a **SimpleRNN model** to predict future temperature values based on historical weather data.
 
-The project covers the complete deep learning pipeline including:
+The project covers:
 
-* Dataset exploration
+- Dataset exploration
   
-* Time-series preprocessing
+- Time-series preprocessing
   
-* Sequence generation
+- Sequence generation
   
-* RNN model design
+- RNN model design
   
-* Model training and validation
+- Model training and validation
     
-* Model evaluation using regression metrics
-   
-* Forecast visualization  
-
-The goal is to build a **robust RNN model capable of capturing temporal patterns in weather data**.
+- Model evaluation
+  
+- Forecast visualization  
 
 ---
 
-# 🎯 Objective
+## 🎯 Objective
 
-The main objectives of this project are:
-
-🔹 Understand time-series dataset structure  
-
-🔹 Perform data preprocessing and normalization  
-
-🔹 Create sequences for RNN input  
-
-🔹 Build a SimpleRNN model using TensorFlow/Keras  
-
-🔹 Evaluate model performance using regression metrics  
-
-🔹 Forecast future temperature values  
+- Understand time-series dataset structure
+  
+- Perform data preprocessing and normalization
+  
+- Create sequences for RNN input
+  
+- Build a SimpleRNN model using TensorFlow/Keras
+  
+- Evaluate model performance
+  
+- Forecast future temperature values  
 
 ---
 
-# 📂 Dataset Information
+## 📂 Dataset Information
 
-The dataset used is the **Daily Weather Dataset** available on Kaggle.
+Dataset: **Daily Weather Dataset (Kaggle)**  
 
-Dataset Link:  
-https://www.kaggle.com/datasets/muthuj7/weather-dataset
-
-### Dataset Details
+https://www.kaggle.com/datasets/muthuj7/weather-dataset  
 
 | Feature | Description |
 |--------|------------|
@@ -74,151 +65,115 @@ https://www.kaggle.com/datasets/muthuj7/weather-dataset
 | Temperature | Target variable |
 | Humidity | Atmospheric moisture |
 | Wind Speed | Wind velocity |
-| Pressure | Atmospheric pressure (optional) |
+| Pressure | Atmospheric pressure |
 
 ---
 
-# 🧹 Data Preprocessing
+## 🧹 Data Preprocessing
 
-Before training the RNN model, several preprocessing steps were applied:
-
-### ✔ Data Exploration
-* Displayed initial rows
+- Data exploration
   
-* Plotted temperature trends over time  
-
-### ✔ Missing Value Handling
-* Checked and handled missing values  
-
-### ✔ Feature Scaling
-* Used **MinMaxScaler** to normalize values between 0 and 1  
-
-### ✔ Sequence Creation
-* Used past **7–14 days** as input sequences
+- Missing value handling
   
-* Target: **Next day temperature**  
-
-### ✔ Train / Validation / Test Split
-
-The dataset was split into:
-
-* Training Set
+- Feature scaling using **MinMaxScaler**
+   
+- Sequence creation (7–14 days input)
   
-* Validation Set
-  
-* Test Set  
+- Train / Validation / Test split  
 
 ---
 
-# 🧠 RNN Model Architecture
+## 🧠 RNN Model Architecture
 
-A **SimpleRNN model** was built using **TensorFlow / Keras**.
-
-### Architecture Components
-
-✔ Input Layer (sequence data)  
-
-✔ SimpleRNN Layer (32–64 units)  
-
-✔ Dropout Layer for regularization  
-
-✔ Dense Layer (1 neuron for output)  
+- Input Layer
+  
+- SimpleRNN Layer (32–64 units)
+  
+- Dropout Layer
+  
+- Dense Output Layer  
 
 ---
 
-# ⚙ Model Training
+## ⚙ Model Training
 
-The RNN model was trained using the **training dataset** and validated using the **validation dataset**.
-
-### Training Techniques Used
-
-* Batch Training
+- Batch training
   
-* Validation Monitoring
+- Validation monitoring
   
-* Loss Curve Analysis  
-
-Training progress was monitored using:
-
-* Training Loss vs Validation Loss  
+- Loss curve analysis  
 
 ---
 
-# 📊 Model Evaluation
+## 📊 Model Evaluation
 
-After training, the model was evaluated using the **test dataset**.
-
-### Evaluation Metrics
-
-* Mean Absolute Error (MAE)
+- Mean Absolute Error (MAE)
   
-* Root Mean Squared Error (RMSE)
+- Root Mean Squared Error (RMSE)
+  
+- R² Score  
+
+---
+
+## 🔍 Prediction Visualization
+
+- Actual vs Predicted comparison
     
-* R² Score  
+- Trend visualization
+  
+- Forecast accuracy evaluation  
 
 ---
 
-# 🔍 Prediction Visualization
+## 🔮 Forecasting
 
-To better understand the model’s performance:
-
-* Compared **actual vs predicted temperatures**
+- Predict next **7 days temperature**
   
-* Visualized prediction trends
-  
-* Evaluated forecasting accuracy  
+- Uses recent historical data  
 
 ---
 
-# 🔮 Forecasting
+## ⚠️ Limitations
 
-* Predicted **next 7 days temperature**
+- SimpleRNN struggles with long-term dependencies compared to LSTM/GRU
+   
+- Limited dataset size may affect generalization
   
-* Used recent historical data as input
+- External weather factors are not included
   
-* Visualized future predictions  
+- Performance may decrease for long-term forecasting
+  
+- Model depends heavily on data quality  
 
 ---
 
-# ⚠️ Limitations
-
-* SimpleRNN may struggle with capturing long-term dependencies compared to LSTM/GRU  
-
-* Limited dataset size may affect model generalization  
-
-* External environmental factors (rainfall, climate anomalies) are not included  
-
-* Performance may decrease for long-term forecasts  
-
-* Model heavily depends on data quality and preprocessing  
-
----
-
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 | Tool | Purpose |
 |------|--------|
-| Python | Programming language |
-| TensorFlow / Keras | Deep learning framework |
-| NumPy | Numerical computation |
+| Python | Programming |
+| TensorFlow / Keras | Deep Learning |
+| NumPy | Computation |
 | Pandas | Data handling |
 | Matplotlib | Visualization |
-| Scikit-learn | Preprocessing & metrics |
+| Scikit-learn | Preprocessing |
 | Kaggle API | Dataset download |
-| Google Colab | Development environment |
+| Google Colab | Development |
 
 ---
 
-# 📁 Repository Structure
+## 📁 Repository Structure
 
+```
 weather-rnn-temperature-prediction/
-│  
 
-├── DL_Assignment_2_RNN.ipynb  
+│
+├── DL_Assignment_2_RNN.ipynb
 
-├── README.md  
+├── README.md
 
-└── DL Assignment 2 - RNN.pdf  
+└── DL Assignment 2 - RNN.pdf
+```
 
 ---
 
@@ -228,52 +183,65 @@ weather-rnn-temperature-prediction/
 
 ```bash
 pip install tensorflow pandas numpy matplotlib scikit-learn kaggle
+```
 
-```python
-pip install tensorflow pandas numpy matplotlib scikit-learn kaggle
+---
 
-# Kaggle API Setup + Download Dataset
+### 2️⃣ Kaggle API Setup & Dataset Download
 
+```bash
 mkdir -p ~/.kaggle
 cp kaggle.json ~/.kaggle/
 chmod 600 ~/.kaggle/kaggle.json
+
 kaggle datasets download -d muthuj7/weather-dataset
 unzip weather-dataset.zip
-
-# 📌 Academic Submission
-
-This project was created as part of a **Deep Learning assignment**, showcasing end-to-end implementation of a time-series forecasting model using RNN, including data preprocessing, sequence generation, model training, evaluation, and prediction visualization.
+```
 
 ---
 
-# 📌 Future Enhancements
+### 3️⃣ Run the Notebook
 
-- Implement advanced models like **LSTM and GRU** for better sequence learning  
-
-- Perform hyperparameter tuning to improve model accuracy  
-
-- Use larger and more diverse weather datasets  
-
-- Integrate real-time weather data using APIs  
-
-- Deploy the model as a web application (Streamlit / Flask)  
-
-- Add interactive visualizations and dashboards  
+- Open notebook in **Google Colab**
+ 
+- Run all cells sequentially
+  
+- View predictions and visualizations
 
 ---
 
-# 👤 Author
+## 📌 Academic Submission
+
+This project was created as part of a **Deep Learning assignment**, demonstrating the implementation of a time-series forecasting model using **Recurrent Neural Networks (RNN)**, including data preprocessing, sequence generation, model training, evaluation, and prediction visualization.
+
+---
+
+## 📌 Future Enhancements
+
+- Implement advanced models like **LSTM and GRU**
+- 
+- Perform hyperparameter tuning
+- 
+- Use larger and more diverse datasets
+- 
+- Integrate real-time weather APIs
+  
+- Add interactive dashboards  
+
+---
+
+## 👤 Author
 
 **Name:** Laya Mary Joy  
 
 **Organization:** Entri Elevate  
 
-**Date:** March 21, 2026
+**Date:** March 21, 2026  
 
 ---
 
-
-# ⭐ Acknowledgment
+## ⭐ Acknowledgment
 
 Thanks to **Entri Elevate** for guidance and support.
 
+---
