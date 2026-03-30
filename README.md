@@ -242,7 +242,6 @@ cp kaggle.json ~/.kaggle/ && \
 chmod 600 ~/.kaggle/kaggle.json && \
 kaggle datasets download -d muthuj7/weather-dataset && \
 unzip weather-dataset.zip
-
 ---
 
 # 📌 Academic Submission
